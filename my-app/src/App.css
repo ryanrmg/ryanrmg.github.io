@@ -1,0 +1,62 @@
+.App {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  background: #1c366b;
+  color: white;
+}
+
+.App-header {
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  width: 40%;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.Card-header {
+  min-width: 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Content {
+  width: 60%;
+  overflow: auto;
+}
+
+.Intro {
+  padding-bottom: 3rem;
+}
+
+.Resume {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.Card {
+  display: flex;
+  flex-direction: row;
+}
+
+.Skills {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  justify-content: flex-start;
+}
+
+.Skill {
+  color: green;
+  background: lightgreen;
+  border-radius: 9999px;
+  padding: .5rem;
+  margin-right: .5rem;
+}

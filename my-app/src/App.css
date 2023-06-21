@@ -4,8 +4,9 @@
   flex-direction: row;
   padding-left: 6rem;
   padding-right: 6rem;
-  background: #1c366b;
-  color: white;
+  background: #282f3c;
+  color: #58d3ff;
+  font-family: Consolas,monaco,monospace;
 }
 
 .App-header {
@@ -54,9 +55,23 @@
 }
 
 .Skill {
-  color: green;
-  background: lightgreen;
+  color: #ecd363;
+  background: black;
   border-radius: 9999px;
   padding: .5rem;
   margin-right: .5rem;
+}
+
+.Nav {
+  display: flex;
+  justify-content: flex-end;
+  background: #282f3c;
+  color: #58d3ff;
+  padding-right: 2rem;
+  padding-top: 2rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }

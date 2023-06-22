@@ -67,8 +67,8 @@
   justify-content: flex-end;
   background: #282f3c;
   color: #58d3ff;
-  padding-right: 2rem;
-  padding-top: 2rem;
+  padding: 2rem;
+  font-family: Consolas,monaco,monospace;
 }
 
 a {

@@ -11,8 +11,12 @@ function App() {
   return (
     <div>
       <div className="Nav">
-        <a href="/home">Home</a>
-        <a href="/blog">Blog</a>
+        <div style={{width: "60%"}}></div>
+        <div style={{width: "40%", display: "flex", justifyContent: "space-evenly"}}>
+          <a href="/home">home</a>
+          <a href="/blog">blog</a>
+          <a href="/data">data</a>
+        </div>
       </div>
       <BrowserRouter>
         <Routes>

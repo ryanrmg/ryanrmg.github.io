@@ -1,11 +1,12 @@
 import '../App.css';
+import me from '../img/me.png'
 
 function Home() {
     return (
       <div className="App">
         <header className="App-header">
-          <h2>hi, i'm ryan.</h2>
-          
+          <h2 id="hello">hi, i'm ryan.</h2>
+          <img style={{height: "30%"}} src={me}></img>
         </header>
         <div className="Content">
           <div className="Resume">
@@ -24,7 +25,7 @@ function Home() {
             </div>
             <div className="Card">
               <header className="Card-header">
-                <p>Summer 2022</p>
+                <p>2022, Summer</p>
               </header>
               <div>
                 <h3>Software Engineer, Raytheon Technologies</h3>
@@ -39,7 +40,7 @@ function Home() {
             </div>
             <div className="Card">
               <header className="Card-header">
-                <p>Summer 2021</p>
+                <p>2021, Summer</p>
               </header>
               <div>
                 <h3>Software Engineer, Microsoft</h3>
@@ -56,7 +57,7 @@ function Home() {
             </div>
             <div className="Card">
               <header className="Card-header">
-                <p>Summer 2020</p>
+                <p>2020, Summer</p>
               </header>
               <div>
                 <h3>Computer Vision Intern, Applied Research Laboratory (Pennsylvania State University)</h3>
@@ -70,7 +71,7 @@ function Home() {
             </div>
             <div className="Card">
               <header className="Card-header">
-                <p>Spring - Fall 2020</p>
+                <p>2020</p>
               </header>
               <div>
                 <h3>Full Stack Developer, Parthean</h3>
@@ -86,7 +87,7 @@ function Home() {
             </div>
             <div className="Card">
               <header className="Card-header">
-                <p>Summer 2019</p>
+                <p>2019, Summer</p>
               </header>
               <div>
                 <h3>Machine Learning Intern, Applied Research Laboratory (Pennsylvania State University)</h3>
@@ -104,7 +105,7 @@ function Home() {
             </div>
             <div className="Card">
               <header className="Card-header">
-                <p>Summer 2018</p>
+                <p>2018, Summer</p>
               </header>
               <div>
                 <h3>Software Engineer Intern, Applied Research Laboratory (Pennsylvania State University)</h3>

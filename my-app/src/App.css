@@ -89,6 +89,10 @@ a {
   justify-content: space-evenly;
 }
 
+#me {
+  height: 30%;
+}
+
 @media all and (max-device-width: 600px) {
   .Nav {
     display: none;
@@ -105,8 +109,8 @@ a {
     justify-content: center;
     min-height: 0;
   }
-  img {
-    display: none;
+  #me {
+    width: 20%;
   }
   #hello {
     padding: 0;

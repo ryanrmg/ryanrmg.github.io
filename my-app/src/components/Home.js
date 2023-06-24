@@ -6,7 +6,7 @@ function Home() {
       <div className="App">
         <header className="App-header">
           <h2 id="hello">hi, i'm ryan.</h2>
-          <img style={{height: "30%"}} src={me}></img>
+          <img id="me" src={me}></img>
         </header>
         <div className="Content">
           <div className="Resume">

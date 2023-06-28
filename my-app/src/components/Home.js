@@ -13,11 +13,11 @@ function Home() {
             <div className="Intro">
               <p>Thank you for visiting my website!</p>
               <a href="https://www.ece.cmu.edu/" target="_blank">
-                <p>I am a recent graduate from Carnegie Mellon University. There I obtained my Masters and Bachelors degree in Electrical 
+                <p>I am a recent graduate of Carnegie Mellon University. There I obtained my Masters and Bachelors degree in Electrical 
                 and Computer Engineering.</p>
               </a>
               <p>
-                My technical interests vary from embedded systems to data visualization. In addition, I have a strong affinity for Computer Security and Network Security.
+                My technical interests vary from embedded systems to data visualization. In addition, I have a strong affinity for computer and network security.
               </p>
               <p>
                 Outside of building software, I enjoy reading, teaching, and spending time outdoors. 
@@ -25,10 +25,10 @@ function Home() {
             </div>
             <div className="Card">
               <header className="Card-header">
-                <p>2022, Summer</p>
+                <h3>2022, Summer</h3>
               </header>
               <div>
-                <h3>Software Engineer, Raytheon Technologies</h3>
+                <h3>Software Engineer Intern, Raytheon Technologies</h3>
                 <div>Developed an automated testing application for verifying system requirements using Java on C2BMC missile defense project.</div>
                 <div>Implemented tests for new requirements and updated existing requirements to ensure version compatibility.</div>
                 <div>Planned and built new Java/Maven application for aggregating test results on web app to provide historial verification context.</div>
@@ -40,10 +40,10 @@ function Home() {
             </div>
             <div className="Card">
               <header className="Card-header">
-                <p>2021, Summer</p>
+                <h3>2021, Summer</h3>
               </header>
               <div>
-                <h3>Software Engineer, Microsoft</h3>
+                <h3>Software Engineer Intern, Microsoft</h3>
                 <div>Investigated methods for optimizing a Yocto build for embedded Linux operating system.</div>
                 <div>Implemented and enabled ccache with Yocto build and analyzed performance gain, achieved 1.2x speedup.</div>
                 <div>Designed new build pipeline for running unit tests in parallel to increase productivity and pull request turnaround time, achieved 25% speedup.</div>
@@ -57,7 +57,7 @@ function Home() {
             </div>
             <div className="Card">
               <header className="Card-header">
-                <p>2020, Summer</p>
+                <h3>2020, Summer</h3>
               </header>
               <div>
                 <h3>Computer Vision Intern, Applied Research Laboratory (Pennsylvania State University)</h3>
@@ -71,7 +71,7 @@ function Home() {
             </div>
             <div className="Card">
               <header className="Card-header">
-                <p>2020</p>
+                <h3>2020</h3>
               </header>
               <div>
                 <h3>Full Stack Developer, Parthean</h3>
@@ -87,7 +87,7 @@ function Home() {
             </div>
             <div className="Card">
               <header className="Card-header">
-                <p>2019, Summer</p>
+                <h3>2019, Summer</h3>
               </header>
               <div>
                 <h3>Machine Learning Intern, Applied Research Laboratory (Pennsylvania State University)</h3>
@@ -105,7 +105,7 @@ function Home() {
             </div>
             <div className="Card">
               <header className="Card-header">
-                <p>2018, Summer</p>
+                <h3>2018, Summer</h3>
               </header>
               <div>
                 <h3>Software Engineer Intern, Applied Research Laboratory (Pennsylvania State University)</h3>
@@ -118,6 +118,9 @@ function Home() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="Contact">
+            <p>Reach out to me at <b>gess.rmg@gmail.com</b> :) </p>
           </div>
         </div>
       </div>

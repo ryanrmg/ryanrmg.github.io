@@ -1,5 +1,8 @@
 import './App.css'
 import Home from './components/Home'
+import Projects from './components/Projects'
+import Blog from './components/Blog'
+
 import {
   BrowserRouter,
   Routes, // instead of "Switch"
@@ -15,13 +18,17 @@ function App() {
         <div id="links">
           <a href="/home">/</a>
           <a href="/blog">/blog</a>
-          <a href="/data">/coursework</a>
+          <a href="/projects">/projects</a>
+          <a href="/coursework">/coursework</a>
         </div>
       </div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/coursework" element={<Projects />} />
         </Routes>
       </BrowserRouter>
     </div>

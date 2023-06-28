@@ -12,7 +12,7 @@
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(15px + 2vmin);
   color: white;
   width: 40%;
   padding-top: 6rem;
@@ -58,7 +58,8 @@
 }
 
 .Skill {
-  color: #ecd363;
+  /* color: #ecd363; */
+  color: #c88c16;
   background: black;
   border-radius: 9999px;
   padding: .5rem;
@@ -93,6 +94,9 @@ a {
   height: 30%;
 }
 
+.Contact {
+  color: #c88c16;
+}
 @media all and (max-device-width: 600px) {
   .Nav {
     display: none;

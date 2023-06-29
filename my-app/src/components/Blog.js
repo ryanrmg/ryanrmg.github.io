@@ -26,7 +26,7 @@ export default function Blog() {
                     </Collapsible>
                 </div>
                 <div className="Project-viewer">
-                    {project.view == "scheduling" && <Scheduling />}
+                    {project.view === "scheduling" && <Scheduling />}
                 </div>
             </div>
             <div className="Credits">

@@ -99,7 +99,10 @@ a {
 }
 @media all and (max-device-width: 600px) {
   .Nav {
-    display: none;
+    display: block;
+  }
+  #links {
+    width: auto;
   }
   .App {
     flex-direction: column;

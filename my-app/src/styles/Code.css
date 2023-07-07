@@ -49,8 +49,21 @@
 }
 
 .Project-viewer {
-    background: #353551;
+    background: #282f3c;
     width: 100%;
+    font-family: Consolas,monaco,monospace;
+    color: #adb5b8;
+    height: 80vh;
+    overflow: auto;
+}
+
+.Blog-header {
+    padding: 1rem;
+}
+
+.Blog-body {
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 
 .Collapsible__trigger {
@@ -76,3 +89,4 @@
 .Collapsible__contentOuter {
     transition: height 10ms linear 0s !important;
 }
+

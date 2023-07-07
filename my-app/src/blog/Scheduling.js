@@ -1,6 +1,10 @@
 
 export default function Scheduling() {
     return (
-        <h3>Global vs Partitioned Scheduling</h3>
+        <div className="Blog">
+            <div className="Blog-header">
+                <p>Global vs Partitioned Scheduling</p>
+            </div>
+        </div>
     );
 }

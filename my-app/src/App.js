@@ -18,9 +18,9 @@ function App() {
           <a href="/coursework">/coursework</a>
         </div>
       </div>
-      <BrowserRouter>
+      <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/coursework" element={<Projects />} />

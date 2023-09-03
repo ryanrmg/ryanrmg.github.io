@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Scheduling from '../blog/Scheduling';
 import React404 from '../blog/React';
 import Wheel from '../blog/Wheel';
+import Vaccines from '../blog/Vaccines';
 
 export default function Blog() {
     const [project, setProject] = useState({
@@ -35,12 +36,18 @@ export default function Blog() {
                                 view: "react"
                             });
                         }}>React404.html</button>
+                        <button className="File" onClick={() => {
+                            setProject({
+                                view: "vaccines"
+                            });
+                        }}>Vaccines.html</button>
                     </Collapsible>
                 </div>
                 <div className="Project-viewer">
                     {project.view === "scheduling" && <Scheduling />}
                     {project.view === "react" && <React404 />}
                     {project.view === "wheel" && <Wheel />}
+                    {project.view === "vaccines" && <Vaccines />}
                 </div>
             </div>
             <div className="Credits">

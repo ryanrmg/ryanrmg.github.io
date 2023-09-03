@@ -7,17 +7,17 @@ export default function ReactBlog() {
             <div className="Blog-body">
                 <p>
                     During the development of this site, I ran into this annoying 
-                    issue when using my navigation to various links. I am using 
-                    BrowserRouter in <a href="https://www.npmjs.com/package/react-router-dom">react-router-dom </a> 
+                    issue when developing the navigation to various links. I am using 
+                    BrowserRouter in <a id="purple" href="https://www.npmjs.com/package/react-router-dom">react-router-dom </a> 
                     for navigating to different pages in my app. Everything 
-                    works fine in my local deployment when I test my app 
-                    at localhost:3000. However, when I deploy my app to this public 
-                    site through github pages I receive 404 errors when I navigate 
-                    to other links. Ughhhhh. 
+                    worked fine in my local deployment when I tested my app 
+                    at localhost:3000. However, when I deploy my app to the public 
+                    site you are visiting with github pages I ran into a bunch of 404 errors when I navigate 
+                    to my blog and other links.
                 </p>
                 <p>
-                    I google for a few days and I come across a few solutions. 
-                    This issue seems fairly popular unfortunately.
+                    I googled this for a few days and I come across a few solutions. 
+                    Unfortunately, this issue appears fairly popular.
                     One suggested using HashRouter instead of BrowserRouter. Another 
                     suggested redirecting the 404 page back to index.js or something like that. 
                     And there were a few other solutions that looked so involved that I didn't 
@@ -32,7 +32,7 @@ export default function ReactBlog() {
                     Github pages. This almost seemed easier than fixing the actual issue. 
                     Simply deploy on a different host. Still didn't work...  
                     Just as I was about to give up and ditch React, Github and start 
-                    over from scratch I found this. <a href="https://github.com/orgs/community/discussions/36010"></a>
+                    over from scratch I found this. <a id="purple" href="https://github.com/orgs/community/discussions/36010">github discussion</a>
                 </p>
                 <p>
                     The solution involves changing  &lt;BrowswerRouter/&gt; to 

@@ -1,4 +1,93 @@
+import { useState } from 'react';
+
 export default function Wheel() {
+
+    function ComputeReturn(ticker, price, annual, weekly, years) {
+        let total = 0;
+        let buyAndHoldShares = 100;
+        let buyAndHoldTotal = 0;
+        let shares = 100;
+        let yearReturn = 0;
+        let contracts = 0;
+        let originalPrice = price;
+        for (let i = 0; i < years; i++) {
+            contracts = Math.round(shares / 100);
+            yearReturn = 52 * weekly * contracts; // compute covered call return for 52 weeks for n contracts
+            total += yearReturn; // add this year return to our total return 
+            // total += annual * price * shares; // add the dividend to our total
+
+            price = price * (1 + annual); // update price
+            shares += (yearReturn / price); // purchase shares using yearly return   
+        }
+        return (
+            <>
+                <p>
+                    Your starting investment is <span id="green">${(originalPrice * 100).toLocaleString("en-US")}. </span>
+                    And after {years} years, your investment might be approximately <span id="green">${Math.round(shares * price).toLocaleString("en-US")} </span> 
+                    and you may own about <span id="green">{Math.round(shares).toLocaleString("en-US")} </span> shares of {ticker}.
+                </p>
+                <p>
+                    If you simply bought and held the shares your ending investment would be <span id="coral">${Math.round(price * buyAndHoldShares).toLocaleString("en-US")} </span>
+                    worth of {ticker}. 
+                </p>
+            </>
+        );
+    }
+
+    function ReturnCalculator() {
+        const [ticker, setTicker] = useState('PLTR');
+        const [price, setPrice] = useState('15');
+        const [annual, setAnnual] = useState('.06');
+        const [weekly, setWeekly] = useState('15');
+        const [years, setYears] = useState('20');
+        const priceAsNumber = Number(price);
+        const annualAsNumber = Number(annual);
+        const weeklyAsNumber = Number(weekly);
+        const yearsAsNumber = Number(years);
+        return (
+            <form id="flex-column">
+                <label>
+                    Ticker: <input 
+                                name="ticker" 
+                                value={ticker} 
+                                onChange={e => setTicker(e.target.value)}
+                            />
+                </label>
+                <label>
+                    Current Price: <input 
+                                name="price" 
+                                value={price} 
+                                onChange={e => setPrice(e.target.value)}
+                            />
+                </label>
+                <label>
+                    Annual Return: <input 
+                                name="annual"
+                                value={annual} 
+                                onChange={e => setAnnual(e.target.value)}
+                            />
+                </label>
+                <label>
+                    Weekly Return:<input 
+                                name="weekly" 
+                                value={weekly} 
+                                onChange={e => setWeekly(e.target.value)}
+                            />
+                </label>
+                <label>
+                    Years Invested: <input 
+                                name="years" 
+                                value={years} 
+                                onChange={e => setYears(e.target.value)}
+                            />
+                </label>
+                {ComputeReturn(ticker, priceAsNumber, annualAsNumber, weeklyAsNumber, yearsAsNumber)}
+                
+            </form>
+
+        );
+    }
+
     return (
         <div className="Blog">
             <div className="Blog-header">
@@ -6,17 +95,17 @@ export default function Wheel() {
             </div>
             <div className="Blog-body">
                 <p>
-                    I am going to explain a strategy I use to print money. Almost.
+                    I am going to explain a strategy I use to <span id="green">print money. </span> Almost.
                     It's not completely free, it requires some capital and some 
                     risk. And this strategy does not work under every market condition. 
                     However, it can be a great strategy to "rent" your equity. Please 
                     pay attention to the risks.
                 </p>
                 <p>
-                    For the following examples, I plan to use the ticker QQQ
+                    For the following examples, I plan to use the ticker <span id="coral">QQQ </span>
                     because it's one of the most common ETFs and it works 
                     pretty well for this strategy. However, it does require quite a 
-                    bit of capital as at the time of writing it costs around 370 / share.
+                    bit of capital as at the time of writing it costs around <span id="green">$370 </span> / share.
                 </p>
                 <h2>Call and Put Options</h2>
                 <p>
@@ -44,8 +133,8 @@ export default function Wheel() {
                     sell a Put option with strike 360 for 2.22 when the underlying is at 
                     365. If theta = .4, the next day, if the underlying is still trading 
                     at 365 (unlikely but bear with me), our put option will be worth 
-                    1.82. We just made $40. We sold at $2.22 and we could choose 
-                    to buy it back at $1.82 for $40 profit. 
+                    1.82. We just made <span id="green">$40. </span> We sold at $2.22 and we could choose 
+                    to buy it back at $1.82 for <span id="green">$40 </span> profit. 
                 </p>
                 <h2>Delta</h2>
                 <p>
@@ -65,18 +154,19 @@ export default function Wheel() {
                     Find a balance that works for you. 
                 </p>
                 <p>
-                    Consider QQQ is trading at $370 per share. Today is July 2. 
+                    Consider <span id="coral">QQQ </span> is trading at $370 per share. Today is July 2. 
                     The weekly July 7 $360 Puts are trading at $0.45 / contract. If we 
                     sold these this week, and did the same for the next 10 weeks. 
-                    We'd have a little more than enough to buy a share of QQQ. The $365 
+                    We'd have a little more than enough to buy a share of <span id="coral">QQQ</span>. The $365 
                     Puts are trading around $1.23 / contract. In only 3 weeks we'd 
-                    have enough to buy a share of QQQ. 
+                    have enough to buy a share of <span id="coral">QQQ</span>.
                 </p>
                 <p>
-                    Let's say QQQ dipped below our strike, unless we roll the option; 
-                    buy it back and sell another week out, we purchase 100 shares of QQQ.
+                    Let's say <span id="coral">QQQ </span> dipped below our strike, unless we roll the option; 
+                    buy it back and sell another week out, we purchase 100 shares of <span id="coral">QQQ</span>.
                     Now we start selling Calls. The weekly $375 calls for this week 
-                    are trading around $1.00 per contract. 
+                    are trading around $1.00 per contract. We could also sell 
+                    longer expirations (30 or 60 days). 
                 </p>
                 <p>
                     Currently trying this on Panantir Technologies (PLTR) as I 
@@ -138,7 +228,7 @@ export default function Wheel() {
                         <td>Total</td>
                         <td></td>
                         <td></td>
-                        <td>$79.73</td>
+                        <td><span id="green">$79.73</span></td>
                     </tr>
                 </table>
                 <p>
@@ -146,6 +236,21 @@ export default function Wheel() {
                     before investing your own capital. Past performance does not 
                     indicate future performance.
                 </p>
+                <h2>Return Calculator</h2>
+                <p>
+                    The calculator below will compute approximate returns based 
+                    on years invested, annual return on investment of underlying 
+                    and the average profit you expect to make per week. All 
+                    gains are re-invested or used to purchase more shares of 
+                    the equity you choose. This is based solely on covered 
+                    calls and assumes you already own 100 shares of the underlying, 
+                    the option always expires worthless, you are selling weeklys and 
+                    assumes you will consistently make whatever value you input 
+                    for weekly return every week. (Some weeks you will make more 
+                    some weeks you will make less so good to use a conservative 
+                    estimate).
+                </p>
+                <ReturnCalculator />
             </div>
         </div>
     );

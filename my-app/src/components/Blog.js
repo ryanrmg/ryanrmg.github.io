@@ -42,6 +42,9 @@ export default function Blog() {
                             });
                         }}>Vaccines.html</button>
                     </Collapsible>
+                    <Collapsible trigger={[<BsChevronDown />, <p>RECIPES</p>]}>
+
+                    </Collapsible>
                 </div>
                 <div className="Project-viewer">
                     {project.view === "scheduling" && <Scheduling />}

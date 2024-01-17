@@ -8,9 +8,9 @@ import Wheel from '../blog/Wheel';
 import Vaccines from '../blog/Vaccines';
 
 export default function Blog() {
-    const [project, setProject] = useState({
-        view: "",
-    });
+    const [project, setProject] = useState('');
+
+    const [tabs, setTabs] = useState([]);
 
 
     return (
@@ -22,35 +22,31 @@ export default function Blog() {
                 <div className="Sidebar">
                     <Collapsible trigger={[<BsChevronDown />, <p>BLOG</p>]}>
                     <button className="File" onClick={() => {
-                            setProject({
-                                view: "wheel"
-                            });
-                        }}>Wheel.html</button>
+                            setProject("wheel");
+                            tabs.push("wheel.txt");
+                        }}><p>Wheel.txt</p></button>
                         <button className="File" onClick={() => {
-                            setProject({
-                                view: "scheduling"
-                            });
-                        }}>Scheduling.html</button>
+                            setProject("scheduling");
+                            tabs.push("scheduling.txt");
+                        }}><p>Scheduling.txt</p></button>
                         <button className="File" onClick={() => {
-                            setProject({
-                                view: "react"
-                            });
-                        }}>React404.html</button>
-                        <button className="File" onClick={() => {
-                            setProject({
-                                view: "vaccines"
-                            });
-                        }}>Vaccines.html</button>
+                            setProject("react");
+                            tabs.push("react.txt");
+                        }}><p>React404.txt</p></button>
+                        {/* <button className="File" onClick={() => {
+                            setProject("vaccines");
+                            tabs.push("vaccines.txt");
+                        }}>Vaccines.txt</button> */}
                     </Collapsible>
                     <Collapsible trigger={[<BsChevronDown />, <p>RECIPES</p>]}>
 
                     </Collapsible>
                 </div>
                 <div className="Project-viewer">
-                    {project.view === "scheduling" && <Scheduling />}
-                    {project.view === "react" && <React404 />}
-                    {project.view === "wheel" && <Wheel />}
-                    {project.view === "vaccines" && <Vaccines />}
+                    {project === "scheduling" && <Scheduling />}
+                    {project === "react" && <React404 />}
+                    {project === "wheel" && <Wheel />}
+                    {project === "vaccines" && <Vaccines />}
                 </div>
             </div>
             <div className="Credits">

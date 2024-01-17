@@ -19,6 +19,14 @@
     color: #adb5b8;
 }
 
+.Explorer p {
+    margin-inline-start: 1em;
+}
+
+.Collapsible p {
+    margin-left: .25em;
+}
+
 .Codeview {
     display: flex;
 }
@@ -41,6 +49,7 @@
     border: none;
     background: none;
     color: #adb5b8;
+    text-align: left;
 }
 
 .File:hover {
@@ -71,6 +80,7 @@
     justify-content: flex-start;
     align-items: center;
     background: #282f3c;
+    height: 2em;
 }
 
 .Collapsible__trigger:hover {
@@ -90,3 +100,10 @@
     transition: height 10ms linear 0s !important;
 }
 
+.Collapsible svg {
+    margin-left: .5em;
+}
+
+.File p {
+    margin: .1em .1em .1em 1.5em;
+}

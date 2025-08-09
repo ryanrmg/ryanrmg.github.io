@@ -6,6 +6,7 @@ import Scheduling from '../blog/Scheduling';
 import React404 from '../blog/React';
 import Wheel from '../blog/Wheel';
 import Vaccines from '../blog/Vaccines';
+import ReadingLog from '../blog/ReadingLog';
 
 export default function Blog() {
     const [project, setProject] = useState('');
@@ -25,10 +26,10 @@ export default function Blog() {
                             setProject("wheel");
                             tabs.push("wheel.txt");
                         }}><p>Wheel.txt</p></button>
-                        <button className="File" onClick={() => {
+                        {/* <button className="File" onClick={() => {
                             setProject("scheduling");
                             tabs.push("scheduling.txt");
-                        }}><p>Scheduling.txt</p></button>
+                        }}><p>Scheduling.txt</p></button> */}
                         <button className="File" onClick={() => {
                             setProject("react");
                             tabs.push("react.txt");
@@ -36,10 +37,18 @@ export default function Blog() {
                         {/* <button className="File" onClick={() => {
                             setProject("vaccines");
                             tabs.push("vaccines.txt");
-                        }}>Vaccines.txt</button> */}
+                        }}><p>Vaccines.txt</p></button> */}
                     </Collapsible>
                     <Collapsible trigger={[<BsChevronDown />, <p>RECIPES</p>]}>
-
+                        <button className="File" onClick={() => {
+                            setProject("ragu.txt");
+                        }}><p>ragu.txt</p></button>
+                    </Collapsible>
+                    <Collapsible trigger={[<BsChevronDown />, <p>READING LIST</p>]}>
+                        <button className="File" onClick={() => {
+                            setProject("reading-log");
+                            tabs.push("reading-log.txt");
+                        }}><p>reading-log.txt</p></button>
                     </Collapsible>
                 </div>
                 <div className="Project-viewer">
@@ -47,6 +56,7 @@ export default function Blog() {
                     {project === "react" && <React404 />}
                     {project === "wheel" && <Wheel />}
                     {project === "vaccines" && <Vaccines />}
+                    {project === "reading-log" && <ReadingLog />}
                 </div>
             </div>
             <div className="Credits">

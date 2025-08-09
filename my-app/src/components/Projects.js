@@ -1,10 +1,10 @@
 import '../styles/Projects.css'
-
+import Rosemoor from '../projects/Rosemoor';
 
 function Projects() {
     return (
         <div className="Projects">
-            Oops, I'm still working on this...
+            <Rosemoor></Rosemoor>
         </div>
     );
 }

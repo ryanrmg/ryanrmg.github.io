@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\graphicspath{ {./images/} }
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Carnegie Mellon University}
+\lhead{Ryan Gess}
+\rfoot{Page \thepage}
+\title{Comprehensive Course Notes}
+\author{Ryan Gess}
+\date{\today}
+\begin{document}
+\maketitle \tableofcontents 
+\def\layersep{2.5cm}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+
+
+\newpage
+
+\section{Data Structures}
+
+\subsection{Stacks and Queues}
+\subsubsection{Stacks}
+First in, Last out  
+\subsubsection{Queues}
+First in, First out
+
+\subsubsection{Dynamic Programming}
+
+\section{Computer Networks}
+
+\section{Concurrency and Parallelism}
+
+\section{Computer Security}
+
+\newpage
+\section{Machine Learning}
+
+
+\subsection{Decision Trees}
+\begin{definition}[Gini Impurity]
+    Helps to determine the feature to split on. Select the feature with the lowest impurity score
+    \[Gini(D) = 1 - \sum^{k}_{i=1} p_i^2\]
+\end{definition}
+
+\begin{definition}[Entropy]
+    High entropy is more unpredictable, lower entropy is more organized and predictable.\\
+    Entropy: 
+    \[H(Y) = - \sum_{y \in Y} P(Y = y) log_2 P(Y = y)\]
+    Specific Conditional Entropy: 
+    \[H(Y | X = x) = -\sum_{y \in Y} P(Y = y | X = x)log_2 P(Y = y | X = x)\]
+    Conditional Entropy: 
+    \[H(Y|X) = \sum_{x \in X} P(X = x)H(Y|X=x)\]
+    Mutual Information: If we know X, how much does this reduce our uncertainty about Y?
+    \[ I(Y;X) = H(Y) - H(Y|X) = H(X) - H(X|Y)\]
+\end{definition}
+
+\begin{subsection}{K-Nearest Neighbors}
+    Classify a point with a majority vote of it's 'k' nearest neighbors. Slow with large number of features. 
+\end{subsection}
+
+\subsection{Readings}
+\subsubsection{Listen Attend Spell}
+
+
+
+
+\end{document}

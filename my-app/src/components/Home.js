@@ -13,8 +13,7 @@ function Home() {
             <div className="Intro">
               <p>Thank you for visiting my website!</p>
               <a href="https://www.ece.cmu.edu/" target="_blank">
-                <p>I am a recent graduate of Carnegie Mellon University. There I obtained my Masters and Bachelors degree in Electrical 
-                and Computer Engineering.</p>
+                <p>I recently graduated from Carnegie Mellon University where I studied Electrical and Computer Engineering.</p>
               </a>
               <p>
                 My technical interests vary from embedded systems to data visualization. In addition, I have a strong affinity for computer and network security.

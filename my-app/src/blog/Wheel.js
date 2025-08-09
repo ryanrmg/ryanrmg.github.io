@@ -95,17 +95,16 @@ export default function Wheel() {
             </div>
             <div className="Blog-body">
                 <p>
-                    I am going to explain a strategy I use to <span id="green">print money. </span> Almost.
-                    It's not completely free, it requires some capital and some 
+                    I <span id="green">print money. </span> Almost.
+                    It's not complete arbitrage, it requires some capital and some 
                     risk. And this strategy does not work under every market condition. 
-                    However, it can be a great strategy to "rent" your equity. Please 
-                    pay attention to the risks.
+                    However, it can be a great strategy to "rent" your equity, yielding higher returns than 
+                    buying and holding shares. Please pay attention to the risks.
                 </p>
                 <p>
                     For the following examples, I plan to use the ticker <span id="coral">QQQ </span>
                     because it's one of the most common ETFs and it works 
-                    pretty well for this strategy. However, it does require quite a 
-                    bit of capital as at the time of writing it costs around <span id="green">$370 </span> / share.
+                    pretty well for this strategy. At the time of writing this, it costs around <span id="green">$370 </span> / share.
                 </p>
                 <h2>Call and Put Options</h2>
                 <p>

@@ -7,6 +7,7 @@ import React404 from '../blog/React';
 import Wheel from '../blog/Wheel';
 import Vaccines from '../blog/Vaccines';
 import ReadingLog from '../blog/ReadingLog';
+import Shrew from '../blog/Shrew';
 
 export default function Blog() {
     const [project, setProject] = useState('');
@@ -34,10 +35,10 @@ export default function Blog() {
                             setProject("react");
                             tabs.push("react.txt");
                         }}><p>React404.txt</p></button>
-                        {/* <button className="File" onClick={() => {
-                            setProject("vaccines");
-                            tabs.push("vaccines.txt");
-                        }}><p>Vaccines.txt</p></button> */}
+                        <button className="File" onClick={() => {
+                            setProject("shrew");
+                            tabs.push("shrew.txt");
+                        }}><p>Shrew.txt</p></button>
                     </Collapsible>
                     <Collapsible trigger={[<BsChevronDown />, <p>RECIPES</p>]}>
                         <button className="File" onClick={() => {
@@ -57,6 +58,7 @@ export default function Blog() {
                     {project === "wheel" && <Wheel />}
                     {project === "vaccines" && <Vaccines />}
                     {project === "reading-log" && <ReadingLog />}
+                    {project === "shrew" && <Shrew />}
                 </div>
             </div>
             <div className="Credits">

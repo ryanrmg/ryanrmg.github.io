@@ -22,7 +22,7 @@ export default function Blog() {
             </div>
             <div className="Codeview">
                 <div className="Sidebar">
-                    <Collapsible trigger={[<BsChevronDown />, <p>BLOG</p>]}>
+                    <Collapsible trigger={[<BsChevronDown />, <p>BLOG</p>]} open={true}>
                     <button className="File" onClick={() => {
                             setProject("wheel");
                             // tabs.push("wheel.txt");
@@ -36,7 +36,7 @@ export default function Blog() {
                             // tabs.push("shrew.txt");
                         }}><p>Shrew.txt</p></button>
                     </Collapsible>
-                    <Collapsible trigger={[<BsChevronDown />, <p>READING LIST</p>]}>
+                    <Collapsible trigger={[<BsChevronDown />, <p>READING LIST</p>]} open={true}>
                         <button className="File" onClick={() => {
                             setProject("reading-log");
                             // tabs.push("reading-log.txt");

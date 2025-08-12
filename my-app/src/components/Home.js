@@ -6,13 +6,13 @@ function Home() {
       <div className="App">
         <header className="App-header">
           <h2 id="hello">hi, i'm ryan.</h2>
-          <img id="me" src={me}></img>
+          <img id="me" src={me} alt="default"></img>
         </header>
         <div className="Content">
           <div className="Resume">
             <div className="Intro">
               <p>Thank you for visiting my website!</p>
-              <a href="https://www.ece.cmu.edu/" target="_blank">
+              <a href="https://www.ece.cmu.edu/" target="_blank" rel="noopener noreferrer">
                 <p>I recently graduated from Carnegie Mellon University where I studied Electrical and Computer Engineering.</p>
               </a>
               <p>

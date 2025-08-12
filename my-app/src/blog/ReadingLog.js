@@ -7,6 +7,16 @@ export default function ReadingLog() {
                     <th>Author</th>
                 </tr>
                 <tr>
+                    <td>The Big Short: Inside the Doomsday Machine</td>
+                    <td>Michael Lewis</td>
+                    <td>history rhymes</td>
+                </tr>
+                <tr>
+                    <td>The Tipping Point</td>
+                    <td>Malcolm Gladwell</td>
+                    <td>Mr. Gladwell is always good</td>
+                </tr>
+                <tr>
                     <td>Crime and Punishment</td>
                     <td>Fyodor Dostoyevsky</td>
                     <td>leisure</td>

@@ -16,20 +16,20 @@ export default function Shrew() {
                     Named after a small but mighty and aggressive animal; the attack can achieve results as effectively as a traditional DoS or Distributed Denial of Service (DDoS) attack in which thousands of packets are sent per second to distrupt a machine.
                 </p>
                 <p>
-                    In this blog post, we will delve into the intricacies of the Shrew attack, and implement it using some bash scripting, a network emulator called Mininet and an AWS instance.
+                    In this blog post, we will delve into the intricacies of the Shrew attack, and implement it using some bash scripting, a network emulator called <a href="http://mininet.org/download/" target="_blank" rel="noopener noreferrer">Mininet</a> and an AWS instance.
                 </p>
                 <h2>Background</h2>
                 <p>
                     Transmission Control Protocol, commonly referred to as TCP, is the typical standard for exchanging data and packets over a network. The protocol attempts to achieve reliability by employing a retransmission strategy when packets are lost. Consider the example below:
                 </p>
-                <img src={shrew1}></img>
+                <img src={shrew1} alt="default"></img>
                 <p>
                     Host A sends a DATA packet to Host B with a sequence number we'll call seq_num. Host B then responds with an acknowledgment or ACK with seq_num to let Host A know it received the packet and Host A can send more data to Host B.
                 </p>
                 <p>
                     Below, at time t=1, Host A sends another DATA packet to B with sequence number seq_num+1, however, this time it is not received by B. The retransmission timer is ticking on A and by t=3, it has still not received an ACK, so Host A it sends DATA:seq_num+1 again. This attempts to give communication over a network some sort of reliability. Packets are lost or corrupted all the time and in these cases, hosts resend the packets so no information is lost.
                 </p>
-                <img src={shrew2}></img>
+                <img src={shrew2} alt="default"></img>
                 <p>
                     If you understand this (and hopefully I explained it well enough) you may see that if an attacker times their attack with the same period as retransmission, they can wreak havoc.
                 </p>
@@ -40,13 +40,13 @@ export default function Shrew() {
                     Attack
                 </h2>
                 <p>
-                    We'll first create the following network topology using a network emulator called Mininet (http://mininet.org/download/). This allows us to “control” many hosts on a network, and simulate this attack using our own personal computer.
+                    We'll first create the following network topology using a network emulator called <a href="http://mininet.org/download/" target="_blank" rel="noopener noreferrer">Mininet</a>. This allows us to “control” many hosts on a network, and simulate this attack using our own personal computer.
                 </p>
                 <h2>
                     Network Topology
                 </h2>
-                <img src={shrew3}></img>
-                <p>
+                <img src={shrew3} alt="default"></img>
+                <p className="codeBlock">
                     $ sudo mn --topo single,3 --link tc,bw=10,delay=20ms
                 </p>
                 <p>
@@ -55,23 +55,23 @@ export default function Shrew() {
                 <p>
                     Let's start a http server on Host 1.
                 </p>
-                <p>
+                <p className="codeBlock">
                     mininet$ h1 python -m SimpleHTTPServer 80 &
                 </p>
                 <p>
                     And if we make a request from Host 2 to Host 1, it should be successful.
                 </p>
-                <p>
+                <p className="codeBlock">
                     mininet$ h2 wget h1
                 </p>
                 <p>
                     Now, let's launch our attack from Host 3 to Host 1. We'll use a tool called scapy for this. Our script will send bursts of traffic (11Mbit/s) every 80ms for approximately 10ms. Which will cause Host 2’s request to fail as our retransmit stage is triggered. Packets are lost since our bandwidth is exceeded during the short bursts and they will be re-sent every 80ms.
                 </p>
-                <p>
+                <p className="codeBlock">
                     mininet$ h3 python attack.py
                 </p>
                 <p>
-                    I did not invent this technique, you can read about it in this academic research paper: https://www.cs.cornell.edu/people/egs/cornellonly/syslunch/spring04/p75-kuzmanovic.pdf
+                    I did not invent this technique, you can read about it in this <a href="https://www.cs.cornell.edu/people/egs/cornellonly/syslunch/spring04/p75-kuzmanovic.pdf" target="_blank" rel="noopener noreferrer">academic research paper</a>
                 </p>
             </div>
         </div>

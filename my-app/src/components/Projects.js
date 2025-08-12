@@ -1,4 +1,3 @@
-import '../styles/Projects.css'
 import Rosemoor from '../projects/Rosemoor';
 
 function Projects() {

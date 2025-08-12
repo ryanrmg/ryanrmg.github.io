@@ -73,6 +73,12 @@
 .Blog-body {
     padding-left: 4rem;
     padding-right: 4rem;
+    img {
+        width: 75%;
+    }
+    .codeBlock {
+        background-color: black;
+    }
 }
 
 .Collapsible__trigger {
